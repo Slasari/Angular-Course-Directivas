@@ -17,7 +17,7 @@
 
 <br>
 
-<p *ngIf="registrado else noregistrado">{{mensaje}} su nombre es: {{usuario.nombre}} {{usuario.apellido}} y su cargo es: <span [ngStyle]="{color: usuario.cargo.toLowerCase() == 'senior' ? 'green' : 'red'}">{{usuario.cargo}}</span></p>
+<p *ngIf="registrado else noregistrado">{{mensaje}} su nombre es: {{usuario.nombre}} {{usuario.apellido}} y su cargo es: <span [ngClass]="{senior: usuario.cargo.toLowerCase() == 'senior'}">{{usuario.cargo}}</span></p>
 <ng-template #noregistrado>
   <p>Aun no hay registros</p>
 </ng-template>
