@@ -8,13 +8,16 @@
   <input type="text" name="apellido" [(ngModel)]="usuario.apellido">
   <br>
   <br>
+  <input type="text" name="cargo" [(ngModel)]="usuario.cargo">
+  <br>
+  <br>
   <input type="submit" value="Registrarse" (click)="register()">
 
 </form>
 
 <br>
 
-<p *ngIf="registrado else noregistrado">{{mensaje}} su nombre es: {{usuario.nombre}} {{usuario.apellido}}</p>
+<p *ngIf="registrado else noregistrado">{{mensaje}} su nombre es: {{usuario.nombre}} {{usuario.apellido}} y su cargo es: <span [ngStyle]="{color: usuario.cargo.toLowerCase() == 'senior' ? 'green' : 'red'}">{{usuario.cargo}}</span></p>
 <ng-template #noregistrado>
   <p>Aun no hay registros</p>
 </ng-template>

@@ -12,6 +12,7 @@ export class AppComponent {
   usuario = {
     nombre: '',
     apellido: '',
+    cargo: '',
   };
   entradas: Array<{titulo: string}>;
 
